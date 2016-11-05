@@ -38,9 +38,11 @@ $start_from=($page-1)*$record_per_page;
 $output .="
 <table class='table table-bordered' >
 <tr>
-<th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>  شناسه Task</th>
-<th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>عنوان</th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>نمایش جزئیات</th>
+<th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>عنوان</th>
+<th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>  شناسه Task</th>
+
+
 </tr>
 ";
 		 
@@ -52,9 +54,7 @@ for ($x =$start_from; $x <($start_from+$record_per_page); $x++)
 	$ll=$xx['data'][$x]['title'];
 	$output.='
 	<tr>
-	    <td>'.$l.'</td>
-	    <td style="  direction: rtl;">'.$ll.'</td>
-		<td><div>
+	<td><div>
   <button style="align:center; width:100%; padding:10px 0px 10px 0px; border-radius: 5px;" onclick="document.getElementById(&#039;id01&#039;).style.display=&#039;block&#039;" class="btn btn-info btn-sm"> <i class="fa fa-bars" aria-hidden="true"></i></button>
   <div id="id01" class="w3-modal w3-animate-opacity">
     <div class="w3-modal-content w3-card-8">
@@ -74,6 +74,10 @@ for ($x =$start_from; $x <($start_from+$record_per_page); $x++)
     </div>
   </div>
 </div></td>
+	<td style="  direction: rtl;">'.$ll.'</td>
+	    <td>'.$l.'</td>
+	    
+		
 	</tr> ';
 
 	
