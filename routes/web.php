@@ -24,7 +24,7 @@ Route::get('chartFlot','pagesController@chartFlot');
 Route::get('chartMorris','pagesController@chartMorris');
 Route::get('chartOther','pagesController@chartOther');
 Route::get('CloseRightSlider','pagesController@CloseRightSlider');
-Route::get('dashboard','pagesController@dashboard');
+Route::get('aroosha_oss','pagesController@aroosha_oss');
 Route::get('dashboard2','pagesController@dashboard2');
 Route::get('drop_upload','pagesController@drop_upload');
 Route::get('fileManager','pagesController@fileManager');

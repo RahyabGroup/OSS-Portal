@@ -48,9 +48,9 @@ class pagesController extends Controller
 	{
 		return view('CloseRightSlider');
 	}
-    public function dashboard()
+    public function aroosha_oss()
 	{
-		return view('dashboard');
+		return view('aroosha_oss');
 	}
     public function dashboard2()
 	{

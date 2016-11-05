@@ -1,5 +1,4 @@
 <?php session_start();
-//age user nadashte bashe bar migarde be login
 if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://localhost:8000/login');  exit(); }?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +11,8 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
   <script src="jquery.min.js"></script>
   <script src="bootstrap.min.js"></script>
 <!-- Title-->
-<title>تیکت</title>
+<title>Aroosha OSS</title>
+
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
@@ -94,7 +94,6 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 				
 		</div>
 		<!-- //header-->
-		
 		
 		
 		<!--
@@ -251,7 +250,7 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 		//////////     TOP SEARCH CONTENT     ///////
 		//////////////////////////////////////////////////////////////////////
 		-->
-		<div class="widget-top-search">
+        <div class="widget-top-search">
 			<span class="icon"><a href="#" class="close-header-search"><i class="fa fa-times"></i></a></span>
 			<form id="top-search">
 					<h2><strong>Quick</strong> Search</h2>
@@ -266,14 +265,14 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 			</form>
 		</div>
 		<!-- //widget-top-search-->
-		
+
 		
 		<!--
 		/////////////////////////////////////////////////////////////////////////
 		//////////     MAIN SHOW CONTENT     //////////
 		//////////////////////////////////////////////////////////////////////
 		-->
-		<div id="main" class="main-Six">
+		<div id="main" class="main-one">
 
 				<ol class="breadcrumb">
 						<li><a href="#">Home</a></li>
@@ -284,7 +283,7 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 
 				<div id="content">
 				
-						<div class="row">
+<div class="row">
 	<div onresize="myFunctionx()" onload="myFunctionx()">						
         <div id="on_javascript_rise">
                
@@ -331,63 +330,57 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 		
 		<!-- //nav-->
 		<div id="AllMobileBadges">
-									<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+		
+								 <button id="buttonx-left" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
 									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
 									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
 									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.task')?><br><img src="tickets.png" alt="product" height="30" width="30"></button>
-									
-								  <button id="buttonx-right" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+																													<?php echo Lang::get('language.product')?><br><img src="product.png" alt="product" height="38" width="38"></button>
+								
+									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
 									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
 									                                                                                <span class="badgeYellow-6" style="top:90%; right:90%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
 									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.customers_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="customer.png" alt="product" height="25" width="25"></button>									
+																													<?php echo Lang::get('language.customer')?><br><img src="customer.png" alt="customer" height="38" width="38"></button>									
 								
 								<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
 									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
 									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
 									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.performance_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="perfomance.png" alt="product" height="25" width="25"></button>
+																													<?php echo Lang::get('language.service')?><br><img src="service.png" alt="service.png" height="38" width="38"></button>
 									
-									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
 									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
 									                                                                                <span class="badgeYellow-6" style="top:90%; right:90%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
 									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.fault_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="network.png" alt="product" height="25" width="25"></button>
+																													<?php echo Lang::get('language.network')?><br><img src="network.png" alt="network" height="38" width="38"></button>
 						   	
-									<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
-									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
-									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
-									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.change_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="arrows.png" alt="product" height="25" width="25"></button>
+									<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-5" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-5" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-5" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-5" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.my_tickets')?><br><img src="myTickets.png" alt="myTickets" height="38" width="38"></button>
 									
-									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
 									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
 									                                                                                <span class="badgeYellow-6" style="top:90%; right:90%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
 									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.capacity_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="battery.png" alt="product" height="25" width="25"></button>
+																													<?php echo Lang::get('language.financial')?><br><img src="financial.png" alt="financial" height="38" width="38"></button>
 									
-									<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
-									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
-									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
-									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.request_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="pen.png" alt="product" height="25" width="25"></button>
 									
-									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
-									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
-									                                                                                <span class="badgeYellow-6" style="top:90%; right:90%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
-									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.launch_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="toolsBag.png" alt="product" height="25" width="25"></button>
-								
-									<div class="hiddenn">	    <button id="buttonx- " type="button" class="btn btn-info btn-block"> </button>
-									<button id="buttonx- " type="button" class="btn btn-info btn-block"> </button>
-									<button id="buttonx- " type="button" class="btn btn-info btn-block"> </button>
-     	</div>
+									
+			                        <button id="buttonx-midlle" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-7" style="top:-5%; right:98%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-7" style="top:90%; right:-2%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-7" style="top:85%; right:98%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-7" style="top:-5%; right:-2%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.kpi')?><br><img src="kpi.png" alt="kpi.png" height="38" width="38"></button>
+									
+							
 					
+									
+									
 									 <div onresize="myFunctionx()" onload="myFunctionx()">
-								
 								<div class="avatar-link btn-group btn-group-justified"  style=" padding:0px;">
-								
 								<a class="btn"  data-toggle="modal" href="#md-messages"  title="Messages"  style=" padding-left:-10px;"><button class="buttonMessage"> <img src="buzz-message-outline-icon.png" alt="home-icon" height="60" width="60">  </button>
 									<span class="badge" style="top:-30px; right:20px; background-color:#f35958;">5</span>
 										</a>
@@ -402,7 +395,7 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 							  </div>
 					</div>
 			</div>	
-</div>							
+</div>			
 			<div class="restPage">	
 
 				
