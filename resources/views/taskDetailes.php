@@ -7,10 +7,6 @@ $param['pagetype']="pagetype";
 $param['userid']=3;
 $param['page']=0;
 $param['count']=30;
-try {
- print_r($myExample->getTask($param));
-}catch(Exception $e)
-{
- echo $e->getMessage();
-}
+$yy=$myExample->getTasks($param);
+
 ?>

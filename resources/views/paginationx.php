@@ -15,6 +15,7 @@
 <div class="container">
 <?php
 include('variables.php'); 
+include('taskDetailes.php');
  //print_r($xx);
  //print_r($xx['data'][2]['taskid']);
 
@@ -38,7 +39,7 @@ $start_from=($page-1)*$record_per_page;
 $output .="
 <table class='table table-bordered' >
 <tr>
-<th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>نمایش جزئیات</th>
+<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'></th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>عنوان</th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>  شناسه Task</th>
 
@@ -52,10 +53,11 @@ for ($x =$start_from; $x <($start_from+$record_per_page); $x++)
 
 	$l=$xx['data'][$x]['taskid'];
 	$ll=$xx['data'][$x]['title'];
+	 $lll=$yy['data'][$x]['description'];
 	$output.='
 	<tr>
 	<td><div>
-  <button style="align:center; width:100%; padding:10px 0px 10px 0px; border-radius: 5px;" onclick="document.getElementById(&#039;id01&#039;).style.display=&#039;block&#039;" class="btn btn-info btn-sm"> <i class="fa fa-bars" aria-hidden="true"></i></button>
+  <i style=" color:#5bc0de; align:center; width:100%; padding:10px 0px 10px 0px; border-radius: 5px;" onclick="document.getElementById(&#039;id01&#039;).style.display=&#039;block&#039;" class="fa fa-bars" aria-hidden="true"></i>
   <div id="id01" class="w3-modal w3-animate-opacity">
     <div class="w3-modal-content w3-card-8">
       <header class="w3-container w3-teal btn-lg">
@@ -65,8 +67,8 @@ for ($x =$start_from; $x <($start_from+$record_per_page); $x++)
         <h2>detailes ... </h2>
       </header>
       <div class="w3-container">
-        <p>detailes '.$l.'</p>
-        <p>'.$l.'</p>
+        <p>detailes of task :  '.$l.'</p>
+        <p style="direction: rtl;">'.$lll.'</p>
       </div>
       <footer class="w3-container w3-teal">
         <p>status</p>

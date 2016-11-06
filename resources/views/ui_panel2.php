@@ -1,4 +1,6 @@
 <?php session_start();
+include('variables.php');
+include('taskDetailes.php');
 if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://localhost:8000/login');  exit(); }?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +13,7 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
   <script src="jquery.min.js"></script>
   <script src="bootstrap.min.js"></script>
 <!-- Title-->
-<title>CAPLET |  Admin HTML Themes</title>
+<title>My Tickets - Aroosha Oss</title>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -376,7 +378,7 @@ $(document).ready(function(){
 
                                      <section style="position: absolute; padding:10px;" class="panel corner-flip">
 												<header class="panel-heading">
-														<h4 style="text-align:right;  font-size:15px; direction: rtl; font-family: BNAZANIN;">&emsp;تعداد<?php include('variables.php'); echo $total_rec; ?>رکورد یافت شد </h4>
+														<h4 style="text-align:right;  font-size:15px; direction: rtl; font-family: BNAZANIN;">&emsp;تعداد<?php  echo $total_rec; ?>رکورد یافت شد </h4>
 														
 	
 											</header>
@@ -384,7 +386,7 @@ $(document).ready(function(){
  <p>  
  
 <div class="container" style="padding:0px;">
-     <div  style="padding-left:-150px; padding-right:20px;" class="tabel-responsive" id="pagination_data">
+     <div  style="padding-left:0px; padding-right:-200px;" class="tabel-responsive" id="pagination_data">
 
      </div>
 </div>
