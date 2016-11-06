@@ -53,25 +53,26 @@ for ($x =$start_from; $x <($start_from+$record_per_page); $x++)
 
 	$l=$xx['data'][$x]['taskid'];
 	$ll=$xx['data'][$x]['title'];
-	 $lll=$yy['data'][$x]['description'];
+	 $desc=$yy['data'][$x]['description'];
+	 $status=$yy['data'][$x]['status'];
 	$output.='
 	<tr>
 	<td><div>
-  <i style=" color:#5bc0de; align:center; width:100%; padding:10px 0px 10px 0px; border-radius: 5px;" onclick="document.getElementById(&#039;id01&#039;).style.display=&#039;block&#039;" class="fa fa-bars" aria-hidden="true"></i>
-  <div id="id01" class="w3-modal w3-animate-opacity">
+  <i style=" color:#5bc0de; align:center; width:100%; padding:10px 0px 10px 0px; border-radius: 5px;" onclick="document.getElementById(&#039;id0'.$x.'&#039;).style.display=&#039;block&#039;" class="fa fa-bars" aria-hidden="true"></i>
+  <div id="id0'.$x.'" class="w3-modal w3-animate-opacity">
     <div class="w3-modal-content w3-card-8">
       <header class="w3-container w3-teal btn-lg">
 	  </br></br></br></br>
-        <span onclick="document.getElementById(&#039;id01&#039;).style.display=&#039;none&#039;"
+        <span onclick="document.getElementById(&#039;id0'.$x.'&#039;).style.display=&#039;none&#039;"
         class="w3-closebtn">&times;</span>
         <h2>detailes ... </h2>
       </header>
       <div class="w3-container">
         <p>detailes of task :  '.$l.'</p>
-        <p style="direction: rtl;">'.$lll.'</p>
+        <p style="direction: rtl;">'.$desc.'</p>
       </div>
       <footer class="w3-container w3-teal">
-        <p>status</p>
+        <p>status : '.$status.'</p>
       </footer>
     </div>
   </div>
