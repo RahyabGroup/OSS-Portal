@@ -1,9 +1,10 @@
 <?php session_start();
+//age user nadashte bashe bar migarde be login
 if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://localhost:8000/login');  exit(); }?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="jq.min.js"></script>
+<script src="js.js" type="text/javascript"></script>
 <!-- Meta information -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -11,8 +12,7 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
   <script src="jquery.min.js"></script>
   <script src="bootstrap.min.js"></script>
 <!-- Title-->
-<title>CAPLET |  Admin HTML Themes</title>
-
+<title>تیکت</title>
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
@@ -46,26 +46,41 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 				</div>
 				<!-- //logo-area-->
 				
-				<div  class="tools-bar">
+				<div class="tools-bar">
 						<ul id="on_javascript_fall_navbar" class="nav navbar-nav nav-main-xs">
-								
+								<li><a href="#menu" class="icon-toolsbar"><i class="fa fa-bars"></i></a></li>
 						</ul>
-						<ul style="margin-top:2px;" class="nav navbar-nav navbar-right tooltip-area">
-								
-								 &emsp;&emsp;
-                    		   
+						<ul class="nav navbar-nav navbar-right tooltip-area">
+								<li id="on_javascript_fall_rightMenu"><a href="#menu-right" data-toggle="tooltip" title="Right Menu" data-container="body" data-placement="left"><i class="fa fa-align-right"></i></a></li>
+								<li class="hidden-xs hidden-sm"><a href="#" class="h-seperate">Help</a></li>
+                    		    <li id="on_javascript_fall_search"><button class="btn btn-circle btn-header-search" ><i class="fa fa-search"></i></button></li> 
 								<li id="on_javascript_risex"><a href="#" class="avatar-header" data-toggle="tooltip" title="Show / hide  menu" data-container="body" data-placement="bottom"   onclick="toggleMoblile('MobileSideMenu');" >
 												<img alt="" src="assets/img/avatar.png"  class="circle">
 												<span class="badge">3</span>
+												<script type="text/javascript">
 												
+												</script>
 										</a>
 								</li>
-								
-								<li >
-										<a href="#" data-toggle="dropdown" data-hover="dropdown">
-											
+								<li id="on_javascript_fall"><a href="#" class="nav-collapse avatar-header" data-toggle="tooltip" title="Show / hide  menu" data-container="body" data-placement="bottom">
+												<img alt="" src="assets/img/avatar.png"  class="circle">
+												<span class="badge">4</span>
 										</a>
-										
+								</li>
+								<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+											<em><strong>Hi</strong>, <?php echo Lang::get('language.personName') ?> , <?php echo $_SESSION['username']; ?></em> <i class="dropdown-icon fa fa-angle-down"></i>
+										</a>
+										<ul class="dropdown-menu pull-right icon-right arrow">
+												<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+												<li><a href="#"><i class="fa fa-cog"></i> Setting </a></li>
+												<li><a href="#"><i class="fa fa-bookmark"></i> Bookmarks</a></li>
+												<li><a href="#"><i class="fa fa-money"></i> Make a Deposit</a></li>
+												<li><a href="<?php echo url('lang/fa')?>"><i class="fa" value="fa"></i><?php echo Lang::get('language.tenEMSPprime')?><img class="flag" src="fa.jpg" alt="Iran Flag" height="40" width="40"><?php echo Lang::get('language.tenEMSP')?></label></a></li>
+                                                <li><a href="<?php echo url('lang/en')?> "><i class="en" value="en"></i>English &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<img class="flag" src="en.jpg" alt="UK Flag" height="40" width="40"></label></a></li>
+                                                
+												<li class="divider"></li>
+												<li><a href="#"><i class="fa fa-sign-out"></i> <?php echo Lang::get('language.signout')?></a></li>	</ul>
 										<!-- //dropdown-menu-->
 								</li>
 								<li class="visible-lg">
@@ -78,6 +93,9 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 				<!-- //tools-bar-->
 				
 		</div>
+		<!-- //header-->
+		
+		
 		
 		<!--
 		/////////////////////////////////////////////////////////////////////////
@@ -255,7 +273,7 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 		//////////     MAIN SHOW CONTENT     //////////
 		//////////////////////////////////////////////////////////////////////
 		-->
-		<div id="main">
+		<div id="main" class="main-Six">
 
 				<ol class="breadcrumb">
 						<li><a href="#">Home</a></li>
@@ -266,7 +284,7 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 
 				<div id="content">
 				
-<div class="row">
+						<div class="row">
 	<div onresize="myFunctionx()" onload="myFunctionx()">						
         <div id="on_javascript_rise">
                
@@ -304,37 +322,7 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 						<!-- //avatar-slide-->
 						
 						
-						<div class="widget-collapse dark">
-								<header>
-										<a data-toggle="collapse" href="#collapseSummary"><i class="collapse-caret fa fa-angle-up"></i> Summary Order </a>
-								</header>
-								<section class="collapse in" id="collapseSummary">
-										<div class="collapse-boby" style="padding:0">
-										
-												<div class="widget-mini-chart align-xs-left">
-														<div class="pull-right" >
-																<div class="sparkline mini-chart" data-type="bar" data-color="warning" data-bar-width="10" data-height="35">2,3,4,5,7,4,5</div>
-														</div>
-														<p>This week's balance</p>
-														<h4>$12,788</h4>
-												</div>
-												<!-- //widget-mini-chart -->
-												
-												<div class="widget-mini-chart align-xs-right">
-														<div class="pull-left">
-																<div class="sparkline mini-chart" data-type="bar" data-color="theme" data-bar-width="10" data-height="45">2,3,7,5,4,6,6,3</div>
-														</div>
-														<p>This week sales</p>
-														<h4>1,325 item</h4>
-												</div>
-												<!-- //widget-mini-chart -->
-												
-										</div>
-										<!-- //collapse-boby-->
-										
-								</section>
-								<!-- //collapse-->
-						</div>
+						
 						<!-- //widget-collapse-->
 
 				</div>		
@@ -342,70 +330,79 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 				<!-- //nav-scroller-->
 		
 		<!-- //nav-->
-		<div id="AllMobileBadges">	
-				
-									 <div class="col-lg-6">
+		<div id="AllMobileBadges">
+									<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.task')?><br><img src="tickets.png" alt="product" height="30" width="30"></button>
+									
+								  <button id="buttonx-right" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-6" style="top:90%; right:90%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.customers_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="customer.png" alt="product" height="25" width="25"></button>									
 								
- <div id="on_javascript_rise">
-
-
-
-<script>
-$(document).ready(function(){
-	load_data();
-	function load_data(page)
-	{
-		 $.ajax({
-			 url:"paginationx",
-			 method:"GET",
-			 data:{page:page},
-			 success:function(data){
-				 $('#pagination_data').html(data);
-				 
-			 }
-		 })
-	}
-	
-	$(document).on('click','.pagination',function(){
-		var page=$(this).attr("id");
-		load_data(page); 
-	});
-});
-
-</script>
-
-                                     <section style="position: absolute; padding:10px;" class="panel corner-flip">
-												<header class="panel-heading">
-														<h4 style="text-align:right;  font-size:15px; direction: rtl; font-family: BNAZANIN;">&emsp;تعداد<?php include('variables.php'); echo $total_rec; ?>رکورد یافت شد </h4>
-														
-	
-											</header>
-											<div id="wrapperx">
- <p>  
- 
-<div class="container" style="padding:0px;">
-     <div  style="padding-left:-150px; padding-right:20px;" class="tabel-responsive" id="pagination_data">
-
-     </div>
-</div>
-	</p>											<footer class="panel-footer">
-														<div id="pagination_controls"> &emsp;&emsp;&emsp;&emsp;  </div>
-												</footer>
-										</section>  
-										<!-- //panel default-->
+								<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.performance_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="perfomance.png" alt="product" height="25" width="25"></button>
+									
+									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-6" style="top:90%; right:90%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.fault_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="network.png" alt="product" height="25" width="25"></button>
+						   	
+									<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.change_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="arrows.png" alt="product" height="25" width="25"></button>
+									
+									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-6" style="top:90%; right:90%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.capacity_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="battery.png" alt="product" height="25" width="25"></button>
+									
+									<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.request_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="pen.png" alt="product" height="25" width="25"></button>
+									
+									<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1"><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
+									                                                                                <span class="badgeYellow-6" style="top:90%; right:90%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
+									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
+																													<?php echo Lang::get('language.launch_ticket')?><br><img src="myTickets.png" alt="product" height="30" width="30">&emsp;<img src="toolsBag.png" alt="product" height="25" width="25"></button>
 								
-						 
-									</br></br>	
-	 </div>
-	  </div>
-								<!-- //content > row > col-lg-6 -->
+									<div class="hiddenn">	    <button id="buttonx- " type="button" class="btn btn-info btn-block"> </button>
+									<button id="buttonx- " type="button" class="btn btn-info btn-block"> </button>
+									<button id="buttonx- " type="button" class="btn btn-info btn-block"> </button>
+     	</div>
+					
+									 <div onresize="myFunctionx()" onload="myFunctionx()">
 								
+								<div class="avatar-link btn-group btn-group-justified"  style=" padding:0px;">
 								
-						</div>
+								<a class="btn"  data-toggle="modal" href="#md-messages"  title="Messages"  style=" padding-left:-10px;"><button class="buttonMessage"> <img src="buzz-message-outline-icon.png" alt="home-icon" height="60" width="60">  </button>
+									<span class="badge" style="top:-30px; right:20px; background-color:#f35958;">5</span>
+										</a>
+										<a class="btn" href="profile.html"  title="Back"><button class="buttonBack"><img src="Back-Icon.ico" alt="home-icon" height="50" width="50"> </button></a>
+										<a class="btn"  data-toggle="modal" href="#md-notification" title="Forward">
+										<button class="buttonForward"> <img src="Forward-icon.ico" alt="home-icon" height="50" width="50"></button>
+										</a>
+										
+										<a class="btn" href="#menu-right" title="Home"><button class="buttonHome"> <img src="home-icon-4.png" alt="home-icon" height="50" width="50"></button></a>
+								</div>	
+						            </div>
 							  </div>
 					</div>
 			</div>	
-</div>			
+</div>							
 			<div class="restPage">	
 
 				

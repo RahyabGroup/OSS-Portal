@@ -2160,6 +2160,8 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
   padding: 0px;
   position: relative;
   width: 34px;
+  color:#262a33;
+  background-color:#262a33;
 }
 #header .tools-bar ul li a.avatar-header .badge {
   background-color: #f35958;
