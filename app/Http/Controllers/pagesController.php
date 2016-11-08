@@ -117,6 +117,23 @@ public function dashboardFour()
 	{
 		return view('ui_panel2');
 	}
+	public function my_tasks()
+	{
+		return view('my_tasks');
+	}
+	public function my_sent_tasks()
+	{
+		return view('my_sent_tasks');
+	}
+	public function paginationx_my_sent_tasks()
+	{
+		return view('paginationx_my_sent_tasks');
+	}
+	
+	public function taskDetailes_my_sent_tasks()
+	{
+		return view('taskDetailes_my_sent_tasks');
+	}
 	
 	public function dashboardNine()
 	{

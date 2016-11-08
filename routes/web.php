@@ -44,6 +44,10 @@ Route::get('getMyTask','pagesController@getMyTask');
 Route::post('getMyTask','pagesController@getMyTask');
 
 Route::get('ui_panel2','pagesController@ui_paneltwo');
+Route::get('my_tasks','pagesController@my_tasks');
+Route::get('my_sent_tasks','pagesController@my_sent_tasks');
+Route::get('paginationx_my_sent_tasks','pagesController@paginationx_my_sent_tasks');
+Route::get('taskDetailes_my_sent_tasks','pagesController@taskDetailes_my_sent_tasks');
 Route::get('pagination','pagesController@pagination');
 Route::post('ui_panelx','pagesController@ui_panelx');
 Route::get('ui_panelx','pagesController@ui_panelx');
