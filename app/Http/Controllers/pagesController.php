@@ -125,14 +125,28 @@ public function dashboardFour()
 	{
 		return view('my_sent_tasks');
 	}
+	public function my_group_tasks()
+	{
+		return view('my_group_tasks');
+	}
 	public function paginationx_my_sent_tasks()
 	{
 		return view('paginationx_my_sent_tasks');
 	}
 	
+	public function paginationx_my_group_tasks()
+	{
+		return view('paginationx_my_group_tasks');
+	}
+	
 	public function taskDetailes_my_sent_tasks()
 	{
 		return view('taskDetailes_my_sent_tasks');
+	}
+	
+	public function taskDetailes_my_group_tasks()
+	{
+		return view('taskDetailes_my_group_tasks');
 	}
 	
 	public function dashboardNine()
@@ -176,6 +190,15 @@ public function dashboardFour()
 	public function variables()
 	{
 		return view('variables');
+	}
+	public function variables_my_group_tasks()
+	{
+		return view('variables_my_group_tasks');
+	}
+	
+	public function variables_my_sent_tasks()
+	{
+		return view('variables_my_sent_tasks');
 	}
 	
 	public function taskDetailes()

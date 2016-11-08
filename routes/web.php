@@ -42,18 +42,23 @@ Route::get('checkLogin','pagesController@checkLogin');
 Route::get('dashboardTest8','pagesController@dashboardTesteight');
 Route::get('getMyTask','pagesController@getMyTask');
 Route::post('getMyTask','pagesController@getMyTask');
+Route::post('my_group_tasks','pagesController@my_group_tasks');
 
 Route::get('ui_panel2','pagesController@ui_paneltwo');
 Route::get('my_tasks','pagesController@my_tasks');
 Route::get('my_sent_tasks','pagesController@my_sent_tasks');
 Route::get('paginationx_my_sent_tasks','pagesController@paginationx_my_sent_tasks');
+Route::get('paginationx_my_group_tasks','pagesController@paginationxmy_group_tasks');
 Route::get('taskDetailes_my_sent_tasks','pagesController@taskDetailes_my_sent_tasks');
+Route::get('taskDetailes_my_group_tasks','pagesController@taskDetailes_my_group_tasks');
 Route::get('pagination','pagesController@pagination');
 Route::post('ui_panelx','pagesController@ui_panelx');
 Route::get('ui_panelx','pagesController@ui_panelx');
 Route::get('paginationx','pagesController@paginationx');
 Route::get('paginationDetaile','pagesController@paginationDetaile');
+Route::get('variables_my_group_tasks','pagesController@variables_my_group_tasks');
 Route::get('variables','pagesController@variables');
+Route::get('variables_my_sent_tasks','pagesController@variables_my_sent_tasks');
 Route::get('taskDetailes','pagesController@taskDetailes');
 
 Route::get('data','pagesController@data');
