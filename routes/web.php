@@ -16,7 +16,7 @@
 
 Route::get('/','pagesController@welcome');
 Route::get('404','pagesController@forofor');
-
+Route::get('fetch','pagesController@fetch');
 Route::get('aroosha_oss','pagesController@aroosha_oss');
 Route::get('dashboard2','pagesController@dashboard2');
 Route::get('drop_upload','pagesController@drop_upload');
@@ -25,6 +25,7 @@ Route::get('drop_upload','pagesController@drop_upload');
 
 Route::post('login','pagesController@login');
 Route::get('login','pagesController@login');
+Route::get('dashboard9x','pagesController@dashboard9x');
 
 Route::get('/lang/{lang}','LanguageController@dashboard');
 Route::get('generate','pagesController@generate');

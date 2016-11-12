@@ -341,11 +341,11 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
 									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
 																													<?php echo Lang::get('language.new_task')?><br><img src="newProduct.png" alt="product" height="30" width="30"><img src="newProductArrow.png" alt="product" height="15" width="15"></button>									
 								 
-								<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
+						<a href="sent_tasks">		<button id="buttonx-left" type="button" class="btn btn-info btn-block badge1" ><span class="badgeGreen-6" style="top:-5%; right:95%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
 									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>
 									                                                                                <span class="badgeYellow-6" style="top:90%; right:95%; color:black;  background-color: #ffff00;"><div class=" blackBadgeNum">3</div></span>
 									                                                                                <span class="badgeGreen-6" style="top:-5%; right:-5%;  background-color: #f35958;"><div class="WhiteBadgeNum">3</div></span>
-																													<?php echo Lang::get('language.sent_task')?><br><img src="statistics.png" alt="product" height="30" width="30"><img src="newProductArrow.png" alt="product" height="15" width="15"></button>
+																													<?php echo Lang::get('language.sent_task')?><br><img src="statistics.png" alt="product" height="30" width="30"><img src="newProductArrow.png" alt="product" height="15" width="15"></button> </a>
 									
 								<a href="my_tasks_my_group">	<button id="buttonx-right" type="button" class="btn btn-info btn-block badge1" style="font-size:17px;" ><span class="badgeGreen-6" style="top:-5%; right:90%;  background-color: #ff6600;"><div class="WhiteBadgeNum">3</div></span> 
 									                                                                                <span class="badgeGreen-6" style="top:90%; right:-5%;  background-color: #4CAF50;"><div class="WhiteBadgeNum">3</div></span>

@@ -1,16 +1,34 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
 <head>
-</head>
-<body>
-<?php
- require_once 'jsonRPCClient.php';
-$myExample = new jsonRPCClient('http://79.127.124.82/webservice/');
-$param['auth']='86b3ad90c5fb712c600b9a12a8a7cb35';
-$param['taskid']=$tskid;
-
-$yy=$myExample->getTaskDetails($param);
-print_r($yy['data']['taskid']);
-?>
+<script src="jq.min.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+<script>
+function searchme(str) {
+	if(str.length==0) {
+document.getElementById ("src").innerHTML ="";
+ return;
+}
+else {
+var  xmlhttp = new XMLHttpRequest(); 
+xmlhttp.onreadystatechange = function() { 
+if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	document.getElementById ("src").innerHTML = xmlhttp.responseText;
+	} 
+  }; 
+ xmlhttp.open("GET", "fetch?a=" + str, true); 
+ xmlhttp.send(); 
+   }
+ }
+ </script>
+ </head> 
+ <body>
+<h1>Search</h1>
+<form>
+<input type="text" onKeyup="searchme(this.value)" >
+</form>
+<p>Results<span id="src"></span></p>
 </body>
 </html>

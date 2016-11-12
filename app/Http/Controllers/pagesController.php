@@ -241,5 +241,14 @@ public function dashboardFour()
 	{
 		return view('taskDetailes_sent_tasks');
 	}
+	public function fetch()
+	{
+		return view('fetch');
+	}
+	
+	public function dashboard9x()
+	{
+		return view('dashboard9x');
+	}
 	
 }
