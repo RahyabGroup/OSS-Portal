@@ -222,4 +222,24 @@ public function dashboardFour()
 		return view('taskDetailes_my_group');
 	}
 	
+	public function sent_tasks()
+	{
+		return view('sent_tasks');
+	}
+	
+	public function paginationx_sent_tasks()
+	{
+		return view('paginationx_sent_tasks');
+	}
+	
+	public function my_task_params_sent_tasks()
+	{
+		return view('my_task_params_sent_tasks');
+	}
+	
+	public function taskDetailes_sent_tasks()
+	{
+		return view('taskDetailes_sent_tasks');
+	}
+	
 }
