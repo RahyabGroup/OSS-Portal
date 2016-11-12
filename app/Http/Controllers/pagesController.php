@@ -121,14 +121,15 @@ public function dashboardFour()
 	{
 		return view('my_tasks');
 	}
+	public function my_tasks_my_group()
+	{
+		return view('my_tasks_my_group');
+	}
 	public function my_sent_tasks()
 	{
 		return view('my_sent_tasks');
 	}
-	public function my_group_tasks()
-	{
-		return view('my_group_tasks');
-	}
+
 	public function paginationx_my_sent_tasks()
 	{
 		return view('paginationx_my_sent_tasks');
@@ -166,6 +167,12 @@ public function dashboardFour()
 	}
 	
 	
+	public function paginationx_my_group()
+	{
+		return view('paginationx_my_group');
+	}
+	
+	
 	public function ui_panelx()
 	{
 		return view('ui_panelx');
@@ -187,9 +194,13 @@ public function dashboardFour()
 		return view('paginationDetaile');
 	}
 	
-	public function variables()
+   public function my_task_params()
 	{
-		return view('variables');
+		return view('my_task_params');
+	}
+   public function my_task_params_my_group()
+	{
+		return view('my_task_params_my_group');
 	}
 	public function variables_my_group_tasks()
 	{
@@ -204,6 +215,11 @@ public function dashboardFour()
 	public function taskDetailes()
 	{
 		return view('taskDetailes');
+	}
+	
+	public function taskDetailes_my_group()
+	{
+		return view('taskDetailes_my_group');
 	}
 	
 }

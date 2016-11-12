@@ -14,8 +14,9 @@
 <body>
 <div class="container">
 <?php
-include('variables.php'); 
+include('my_task_params.php'); 
 include('taskDetailes.php');
+
  //print_r($xx);
  //print_r($xx['data'][2]['taskid']);
 
@@ -46,38 +47,38 @@ $output .="
 
 </tr>
 ";
-		 
 
 for ($x =$start_from; $x <($start_from+$record_per_page); $x++) 
 {
 
 	$l=$xx['data'][$x]['taskid'];
 	$ll=$xx['data'][$x]['title'];
-	 $desc=$yy['data'][$x]['description'];
-	 $status=$yy['data'][$x]['status'];
+	
 	$output.='
 	<tr>
 	<td><div>
-  <i style=" color:#5bc0de; align:center; width:100%; padding:10px 0px 10px 0px; border-radius: 5px;" onclick="document.getElementById(&#039;id0'.$x.'&#039;).style.display=&#039;block&#039;" class="fa fa-bars" aria-hidden="true"></i>
-  <div id="id0'.$x.'" class="w3-modal w3-animate-opacity">
+  <i style=" color:#5bc0de; align:center; width:100%; padding:10px 0px 10px 0px; border-radius: 5px;" onclick="document.getElementById(&#039;id0'.$l.'&#039;).style.display=&#039;block&#039;" class="fa fa-bars" aria-hidden="true"></i>
+  <div id="id0'.$l.'" class="w3-modal w3-animate-opacity">
     <div class="w3-modal-content w3-card-8">
       <header class="w3-container w3-teal btn-lg">
 	  </br></br></br></br>
-        <span onclick="document.getElementById(&#039;id0'.$x.'&#039;).style.display=&#039;none&#039;"
+        <span onclick="document.getElementById(&#039;id0'.$l.'&#039;).style.display=&#039;none&#039;"
         class="w3-closebtn">&times;</span>
-        <h2>detailes ... </h2>
+        <p style="direction: rtl; font-size:25px; direction: rtl; font-family: BNAZANIN;">&emsp;جزئیات : </p>
       </header>
       <div class="w3-container">
-        <p>detailes of task :  '.$l.'</p>
-        <p style="direction: rtl;">'.$desc.'</p>
+        <p style="direction: rtl; font-size:15px; direction: rtl; font-family: BNAZANIN;">نام ثبت کننده :  '.getTaskSubscriberName($l).'</p>
+        <p style="direction: rtl; font-size:15px; direction: rtl; font-family: BNAZANIN;">نام کاربری سرویس :  '.getTaskServiceUsername($l).'</p>
+        <p style="direction: rtl; font-size:15px; direction: rtl; font-family: BNAZANIN;">پسورد سرویس :  '.getTaskServicePassword($l).'</p>
+        
       </div>
       <footer class="w3-container w3-teal">
-        <p>status : '.$status.'</p>
+        <p style="direction: rtl; font-size:15px; direction: rtl; font-family: BNAZANIN;">شناسه '.getTaskid($l).' : task</p>
       </footer>
     </div>
   </div>
 </div></td>
-	<td style="  direction: rtl;">'.$ll.'</td>
+	<td style="  direction: rtl; font-size:15px; direction: rtl; font-family: BNAZANIN;">'.$ll.'</td>
 	    <td>'.$l.'</td>
 	    
 		
