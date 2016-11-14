@@ -394,8 +394,8 @@ $(document).ready(function(){
      </div>
 </div>
 	</p>											<footer class="panel-footer">
-														<div id="pagination_controls"> &emsp;&emsp;&emsp;&emsp;  </div>
-														<span  style="direction: rtl; padding-right:50%; position: relative;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="button" class="btn btn-inverse">Inverse</button></span>
+														<div id="pagination_controls" align="right"> <button  style="direction: rtl; text-align='center' font-size:15px; direction: rtl; font-family: BNAZANIN; font-weight: bold;" type="button" class="btn btn-inverse">&emsp;&emsp;جست و جو&emsp;&emsp;</button>  </div>
+													
 												</footer>
 										</section>  
 										<!-- //panel default-->
