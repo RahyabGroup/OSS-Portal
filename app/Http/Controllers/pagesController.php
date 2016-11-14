@@ -251,4 +251,19 @@ public function dashboardFour()
 		return view('dashboard9x');
 	}
 	
+	public function welcomei()
+	{
+		return view('welcomei');
+	}
+	
+	public function defaulti()
+	{
+		return view('defaulti');
+	}
+	
+	public function jdf()
+	{
+		return view('jdf');
+	}
+	
 }

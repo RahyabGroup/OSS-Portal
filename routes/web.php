@@ -16,6 +16,7 @@
 
 Route::get('/','pagesController@welcome');
 Route::get('404','pagesController@forofor');
+Route::post('fetch','pagesController@fetch');
 Route::get('fetch','pagesController@fetch');
 Route::get('aroosha_oss','pagesController@aroosha_oss');
 Route::get('dashboard2','pagesController@dashboard2');
@@ -64,11 +65,20 @@ Route::get('my_task_params_my_group','pagesController@my_task_params_my_group');
 Route::get('variables_my_sent_tasks','pagesController@variables_my_sent_tasks');
 Route::get('taskDetailes','pagesController@taskDetailes');
 Route::get('taskDetailes_my_group','pagesController@taskDetailes_my_group');
-
 Route::get('data','pagesController@data');
-
-
 Route::get('loginn','pagesController@loginn');
 Route::post('loginn','pagesController@loginn');
+
+Route::get('welcomei','pagesController@welcomei');
+Route::get('defaulti','pagesController@defaulti');
+Route::get('jdf','pagesController@jdf');
+
+
+
+
+
+
+
+
 
 
