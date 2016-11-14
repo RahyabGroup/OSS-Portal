@@ -36,15 +36,20 @@ $xx=$myExample->getTasks($param);
   include('jdf.php');
      $datepickerFrom=$_REQUEST['datepickerFrom'];
       $datepickerTo=$_REQUEST['datepickerTo'];
-
+	  
 	
 	$dateArrayFrom=explode("/",$datepickerFrom);
+	print_r($dateArrayFrom);
     $jTOgFrom=jalali_to_gregorian($dateArrayFrom[0],$dateArrayFrom[1],$dateArrayFrom[2]);
+	print_r($jTOgFrom);
 	if($jTOgFrom[1]<10)
 	{$jTOgFrom[0]=$jTOgFrom[0]*10;}
+//print_r($jTOgFrom);
 	if($jTOgFrom[2]<10)
 	{$jTOgFrom[1]=$jTOgFrom[1]*10;}
+//print_r($jTOgFrom);
     $dateStingFrom=implode("",$jTOgFrom);
+	
 	/////////////////////////////////////////////////////////////
 	$dateArrayTO=explode("/",$datepickerTo);
     $jTOgTO=jalali_to_gregorian($dateArrayTO[0],$dateArrayTO[1],$dateArrayTO[2]);

@@ -394,7 +394,7 @@ $(document).ready(function(){
      </div>
 </div>
 	</p>											<footer class="panel-footer">
-														<div id="pagination_controls" align="right"> <button  style="direction: rtl; text-align='center' font-size:15px; direction: rtl; font-family: BNAZANIN; font-weight: bold;" type="button" class="btn btn-inverse">&emsp;&emsp;جست و جو&emsp;&emsp;</button>  </div>
+													 <div id="pagination_controls" align="right"> <a href="defaulti">	<button  style="direction: rtl; text-align='center' font-size:15px; direction: rtl; font-family: BNAZANIN; font-weight: bold;" type="button" class="btn btn-inverse">&emsp;&emsp;جست و جو&emsp;&emsp;</button> </a> </div>
 													
 												</footer>
 										</section>  

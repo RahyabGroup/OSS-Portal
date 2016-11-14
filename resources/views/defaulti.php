@@ -147,11 +147,11 @@
     <div>
  <form action="welcomei" method="GET">
         <p class='ui-widget-content'>
-            <strong class='ui-state-error'>تنظیم حداقل بصورت پویا</strong><br />
+            <strong class='ui-state-error'>انتخاب تاریخ</strong><br />
             از تاریخ:
-            <input type="text" name="datepickerFrom" id="datepickerFrom" required>
+            <input type="text" name="datepickerFrom" id="datepicker12from" required>
             تا تاریخ:
-            <input type="text" name="datepickerTo" id="datepickerTo"  required>
+            <input type="text" name="datepickerTo" id="datepicker12to"  required>
         </p>
        <input type="submit">
 </form>
