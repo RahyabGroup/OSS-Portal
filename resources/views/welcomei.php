@@ -39,7 +39,7 @@ $xx=$myExample->getTasks($param);
 	  
 	
 	$dateArrayFrom=explode("/",$datepickerFrom);
-    $jTOgFrom=jalali_to_gregorian($dateArrayFrom[2],$dateArrayFrom[1],$dateArrayFrom[1]);
+    $jTOgFrom=jalali_to_gregorian($dateArrayFrom[2],$dateArrayFrom[1],$dateArrayFrom[0]);
 	if($jTOgFrom[1]<10)
 	{$jTOgFrom[0]=$jTOgFrom[0]*10;}
 	if($jTOgFrom[2]<10)
@@ -47,7 +47,7 @@ $xx=$myExample->getTasks($param);
     $dateStingFrom=implode("",$jTOgFrom);
 	/////////////////////////////////////////////////////////////
 	$dateArrayTO=explode("/",$datepickerTo);
-    $jTOgTO=jalali_to_gregorian($dateArrayTO[2],$dateArrayTO[1],$dateArrayTO[1]);
+    $jTOgTO=jalali_to_gregorian($dateArrayTO[2],$dateArrayTO[1],$dateArrayTO[0]);
 	if($jTOgTO[1]<10)
 	{$jTOgTO[0]=$jTOgTO[0]*10;}
 	if($jTOgTO[2]<10)

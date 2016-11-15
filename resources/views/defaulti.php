@@ -13,7 +13,7 @@
     <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc-ar.js"></script>
     <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc-fa.js"></script>
 
-    <script type="text/javascript">
+     <script type="text/javascript">
 	    $(function() {
 	        // حالت پیشفرض
 	        $('#datepicker0').datepicker();
@@ -116,7 +116,7 @@
         }
         body
         {
-			background-color: #0972a5;
+			background-color: white;
             direction: rtl;
             font-size: 80%;
         }
@@ -145,7 +145,7 @@
 </head>
 <body>
     <div>
- <form action="welcomei" method="GET">
+ <form action="my_tasks_history" method="GET">
         <p class='ui-widget-content'>
             <strong class='ui-state-error'>انتخاب تاریخ</strong><br />
             از تاریخ:
@@ -153,8 +153,9 @@
             تا تاریخ:
             <input type="text" name="datepickerTo" id="datepicker12to"  required>
         </p>
-       <input type="submit">
-</form>
+		<span align="center" style="display:block; "><button  style="direction: rtl; text-align='center' font-size:15px; direction: rtl; font-family: BNAZANIN; font-weight: bold;" type="submit" class="btn btn-inverse">&emsp;&emsp;جست و جو&emsp;&emsp;</button> </span>
+													
+       </form>
     </div>
 </body>
 </html>

@@ -266,4 +266,26 @@ public function dashboardFour()
 		return view('jdf');
 	}
 	
+	public function my_tasks_history()
+	{
+		return view('my_tasks_history');
+	}
+	
+	
+	public function paginationx_history()
+	{
+		return view('paginationx_history');
+	}
+	
+	
+	public function taskDetailes_history()
+	{
+		return view('taskDetailes_history');
+	}
+	
+	
+	public function my_task_params_history()
+	{
+		return view('my_task_params_history');
+	}
 }

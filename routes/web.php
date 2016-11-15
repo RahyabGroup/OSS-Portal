@@ -74,6 +74,12 @@ Route::get('defaulti','pagesController@defaulti');
 Route::get('jdf','pagesController@jdf');
 
 
+Route::get('my_tasks_history','pagesController@my_tasks_history');
+Route::get('paginationx_history','pagesController@paginationx_history');
+Route::get('taskDetailes_history','pagesController@taskDetailes_history');
+Route::get('my_task_params_history','pagesController@my_task_params_history');
+
+
 
 
 
