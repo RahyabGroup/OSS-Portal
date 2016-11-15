@@ -1,8 +1,17 @@
+
+
+<?php 
+
+session_start();
+include('my_task_params_history.php');
+include('taskDetailes_history.php');
+if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://localhost:8000/login');  exit(); }?>
+
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fa">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>تست پلاگین انتخاب تاریخ</title>
+    <title> Aroosha OSS | انتخاب بازه تاریخ</title>
 
 	<link type="text/css" href="styles/jquery-ui-1.8.14.css" rel="stylesheet" />
 
@@ -13,7 +22,7 @@
     <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc-ar.js"></script>
     <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc-fa.js"></script>
 
-     <script type="text/javascript">
+    <script type="text/javascript">
 	    $(function() {
 	        // حالت پیشفرض
 	        $('#datepicker0').datepicker();
@@ -116,7 +125,7 @@
         }
         body
         {
-			background-color: white;
+			background-color:gray ;
             direction: rtl;
             font-size: 80%;
         }
@@ -131,7 +140,7 @@
 			font-weight: normal;
 		}
         p.ui-widget-header
-        {
+        {  width:20%; 
             text-align: center;
             font-weight: normal;
         }
@@ -143,15 +152,19 @@
         }
     </style>
 </head>
+
 <body>
+
+	
     <div>
  <form action="my_tasks_history" method="GET">
         <p class='ui-widget-content'>
             <strong class='ui-state-error'>انتخاب تاریخ</strong><br />
             از تاریخ:
-            <input type="text" name="datepickerFrom" id="datepicker12from" required>
+            <input  style="width:20%;  text-align: center;" type="text" name="datepickerFrom" id="datepicker12from" required>
+			&emsp;&emsp;&emsp;&emsp;
             تا تاریخ:
-            <input type="text" name="datepickerTo" id="datepicker12to"  required>
+            <input  style="width:20%;  text-align: center;" type="text" name="datepickerTo" id="datepicker12to"  required>
         </p>
 		<span align="center" style="display:block; "><button  style="direction: rtl; text-align='center' font-size:15px; direction: rtl; font-family: BNAZANIN; font-weight: bold;" type="submit" class="btn btn-inverse">&emsp;&emsp;جست و جو&emsp;&emsp;</button> </span>
 													

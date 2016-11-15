@@ -39,7 +39,7 @@ $xx=$myExample->getTasks($param);
 	  
 	
 	$dateArrayFrom=explode("/",$datepickerFrom);
-    $jTOgFrom=jalali_to_gregorian($dateArrayFrom[2],$dateArrayFrom[1],$dateArrayFrom[0]);
+    $jTOgFrom=jalali_to_gregorian($dateArrayFrom[2],$dateArrayFrom[1],$dateArrayFrom[1]);
 	if($jTOgFrom[1]<10)
 	{$jTOgFrom[0]=$jTOgFrom[0]*10;}
 	if($jTOgFrom[2]<10)
@@ -80,10 +80,10 @@ $output .="
 			$titlex=$xx['data'][$i]['title'];
 			$output .="
 <tr>
-<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$submitdatex."</th>
+
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$taskidx."</th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$titlex."</th>
-
+<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$submitdatex."</th>
 
 </tr>
 ";
