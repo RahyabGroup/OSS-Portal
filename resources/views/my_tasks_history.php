@@ -413,7 +413,7 @@ $output .="
 <table class='table table-bordered' >
 <tr>
 
-<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>تاریخ</th>
+<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>تاریخ ثبت</th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>عنوان</th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>  شناسه Task</th>
 
