@@ -19,7 +19,7 @@ try {
 
 
 $x=$myExample->OSSLogin($param);	
-if($x['errcode']==2&&$_SESSION['secure']==$_POST['secure']) { $_SESSION['username']= $username; header('Location:dashboard');  exit(); }
+if($x['errcode']==2&&$_SESSION['secure']==$_POST['secure']) { $_SESSION['username']= $username; header('Location:aroosha_oss');  exit(); }
 elseif($x['errcode']!=2||$_SESSION['secure']!=$_POST['secure']){
 	
 	                                 if($x['errcode']!=2&&$_SESSION['secure']!=$_POST['secure']){$_SESSION['x']=' &emsp;&emsp;&emsp;اطلاعات وارد شده صحیح نمی باشد';}
@@ -37,7 +37,7 @@ elseif($x['errcode']!=2||$_SESSION['secure']!=$_POST['secure']){
                                    </script>
  <?php 
 }
-else{ header('Location:http://localhost:8000/login');  exit(); }
+else{ header('Location:http://79.127.124.85:8000/login');  exit(); }
 }
 catch(Exception $e)
 {

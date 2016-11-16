@@ -3,7 +3,7 @@
 session_start();
 include('my_task_params_my_group.php');
 include('taskDetailes_my_group.php');
-if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://localhost:8000/login');  exit(); }?>
+if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://79.127.124.85:8000/login');  exit(); }?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

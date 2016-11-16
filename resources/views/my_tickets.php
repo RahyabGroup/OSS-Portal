@@ -1,6 +1,6 @@
 <?php session_start();
 //age user nadashte bashe bar migarde be login
-if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://localhost:8000/login');  exit(); }?>
+if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://79.127.124.85:8000/login');  exit(); }?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

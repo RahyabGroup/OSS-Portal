@@ -3,7 +3,7 @@
 session_start();
 include('my_task_params_history.php');
 include('taskDetailes_history.php');
-if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://localhost:8000/login');  exit(); }?>
+if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://79.127.124.85:8000/login');  exit(); }?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -412,7 +412,8 @@ $xx=$myExample->getTasks($param);
 $output .="
 <table class='table table-bordered' >
 <tr>
-<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'></th>
+
+<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>تاریخ</th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>عنوان</th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>  شناسه Task</th>
 
@@ -428,13 +429,18 @@ $cc=0;
 		if(($dateStingFrom<=$submitdate8first)&&($dateStingTO>=$submitdate8first))
 		{
 			$submitdatex=$xx['data'][$i]['submitdate'];
+			$yyyy=substr($submitdatex,0,4);
+			$mm=substr($submitdatex,4,2);
+			$dd=substr($submitdatex,6,2);
+			$gToj=gregorian_to_jalali($yyyy,$mm,$dd);
+			$gToj=implode("/",$gToj);
 			$taskidx=$xx['data'][$i]['taskid'];
 			$titlex=$xx['data'][$i]['title'];
 			$output .="
 <tr>
-<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$submitdatex."</th>
-<th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$taskidx."</th>
+<th width='8%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$gToj."</th>
 <th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$titlex."</th>
+<th width='30%' style='text-align:center; direction: rtl; font-family: BNAZANIN;'>".$taskidx."</th>
 
 
 </tr>

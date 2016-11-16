@@ -8,7 +8,7 @@ $_SESSION['secure']=rand(10000,99999);
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <!-- Title-->
-<title>CAPLET |  Admin HTML Themes</title>
+<title>LOGIN |  Aroosha OSS</title>
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">

@@ -5,7 +5,7 @@
 session_start();
 include('my_task_params_history.php');
 include('taskDetailes_history.php');
-if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://localhost:8000/login');  exit(); }?>
+if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Location:http://79.127.124.85:8000/login');  exit(); }?>
 
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fa">
@@ -161,10 +161,10 @@ if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) { header('Loc
         <p class='ui-widget-content'>
             <strong class='ui-state-error'>انتخاب تاریخ</strong><br />
             از تاریخ:
-            <input  style="width:20%;  text-align: center;" type="text" name="datepickerFrom" id="datepicker12from" required>
-			&emsp;&emsp;&emsp;&emsp;
+            <input  style="width:30%;  text-align: center;" type="text" name="datepickerFrom" id="datepicker12from" required>
+			
             تا تاریخ:
-            <input  style="width:20%;  text-align: center;" type="text" name="datepickerTo" id="datepicker12to"  required>
+            <input  style="width:30%;  text-align: center;" type="text" name="datepickerTo" id="datepicker12to"  required>
         </p>
 		<span align="center" style="display:block; "><button  style="direction: rtl; text-align='center' font-size:15px; direction: rtl; font-family: BNAZANIN; font-weight: bold;" type="submit" class="btn btn-inverse">&emsp;&emsp;جست و جو&emsp;&emsp;</button> </span>
 													
